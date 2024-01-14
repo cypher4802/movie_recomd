@@ -10,7 +10,7 @@ const UserSignup = ({ onSignup }) => {
   const [goToMovies,setGoToMovies]=useState(false);
 
   if (goToMovies){
-    return <Navigate to = "/auth/login"/>;
+    return <Navigate to = "/"/>;
   }
 
   const handleSignup = async () => {
@@ -44,7 +44,7 @@ const UserSignup = ({ onSignup }) => {
       <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
       <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <input type="text" placeholder="Profile Photo URL" value={profilePhoto} onChange={(e) => setProfilePhoto(e.target.value)} />
+      {/* <input type="text" placeholder="Profile Photo URL" value={profilePhoto} onChange={(e) => setProfilePhoto(e.target.value)} /> */}
       <button onClick={handleSignup}>Signup</button>
     </div>
   );

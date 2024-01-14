@@ -33,7 +33,7 @@ const App = () => {
         <Routes>
           <Route exact path="/movies/" element={<MovieListComponent user={user} />} />
           <Route path="/movies/:id" element={<OneMoviePage />} />
-          <Route path="/auth/login" element={<UserLogin onLogin={handleLogin} />} />
+          <Route path="/" element={<UserLogin onLogin={handleLogin} />} />
           <Route path="/auth/signup" element={<UserSignup onSignup={handleSignup} />} />
           <Route path="/favorites" element={<Favorites user={user} />} />
         </Routes>

@@ -7,10 +7,15 @@ const UserLogin = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [goToMovies,setGoToMovies]=useState(false);
+  const [goToSignup,setGoToSignup]=useState(false);
 
   if (goToMovies){
     return <Navigate to = "/movies/"/>;
   }
+  if (goToSignup){
+    return <Navigate to = "/auth/signup"/>;
+  }
+
 
 
 
@@ -47,10 +52,11 @@ const UserLogin = ({ onLogin }) => {
 
   return (
     <div className='Bg'>
-      <h2>Login</h2>
+      <h2>Login</h2> 
       <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <button onClick={handleLogin}>Login</button>
+      <button onClick={()=>setGoToSignup(true)}>Register new user</button>
     </div>
   );
 };
